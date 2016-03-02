@@ -1,86 +1,80 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+  <meta charset="utf-8">
 
-<script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
 
-<title>Pokémon Marvel Smackdown</title>
+  <title>Pokémon Marvel Smackdown</title>
 
-<!-- Stop lies and stop font enlargement-->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Stop lies and stop font enlargement-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<!--- Google Fonts --->
-<link href='http://fonts.googleapis.com/css?family=Oswald|Lato:400,700' rel='stylesheet' type='text/css'>
-
-
-<!----- STYLE SHEETS ----->
-<link href="../styles/reset.css" rel="stylesheet">
-<!-- phone-default -->
-<link href="../styles/phone-default.css" rel="stylesheet">
-<!-- enhance-tablet -->
-<link href="../styles/tablet.css" rel="stylesheet">
-<!-- enhance-desktop -->
-<link href="../styles/desktop.css" rel="stylesheet">
+  <!--- Google Fonts --->
+  <link href='http://fonts.googleapis.com/css?family=Oswald|Lato:400,700' rel='stylesheet' type='text/css'>
 
 
-<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-<![endif]-->
-     
+  <!----- STYLE SHEETS ----->
+  <link href="css/app.min.css" rel="stylesheet">
+
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
 </head>
 <body>
-<div id="wrapper">
-<div id="container">
-	
-	<header>
-    
-    <hgroup>
-    
-    <a href="http://www.marvel.com"><img src="../static/images/hammer.png" alt="Thor's Hammer" class="headerimage"></a>
-    <a href="http://www.pokemon.com"><img src="../static/images/pokeball.png" alt="pokeball" class="headerimage"></a>
-    
-    
-    <h1>Pokémon Marvel Smackdown</h1>
-    <h2>Gotta Catch 'em heros</h2>
-    </hgroup>
-    <div class="KeepOpen"></div>
-    </header>
-    
-    
-   
-    <!-- page content here -->
-    <div id="content">
-   
+  <div id="wrapper">
+    <div id="container">
 
-    
-    
-    
-    </div><!-- end content -->
+      <header>
+
+        <hgroup>
+
+          <a href="http://www.marvel.com"><img src="../static/images/hammer.png" alt="Thor's Hammer" class="headerimage"></a>
+          <a href="http://www.pokemon.com"><img src="../static/images/pokeball.png" alt="pokeball" class="headerimage"></a>
+
+
+          <h1>Pokémon Marvel Smackdown</h1>
+          <h2>Gotta Catch 'em heros</h2>
+        </hgroup>
+        <div class="KeepOpen"></div>
+      </header>
+
+
+
+      <!-- page content here -->
+      <div id="content">
+
+
+
+
+
+      </div><!-- end content -->
     </div> <!-- end container -->
-    
-    
+
+
     <footer>
-    
-  <div class="left"></div>
-  <div class="right"></div>
-    
-    <p>A UVU DGM 3670 Team Project built Spring 2016</p>
-    
-    <a href="http://pokeapi.co/"><p>Data provided by Pokéapi. &copy; 2016 Paul Hallett</p></a>
-    <a href="http://developer.marvel.com/"><p>Data provided by Marvel. &copy; 2014 Marvel</p></a>
-    <!-- Marvel requires a backlink if we chose to integrate images, etc. See: http://developer.marvel.com/documentation/attribution You must link to Marvel whenever you show any information from the API beyond the title and small (100px width or smaller) thumbnail of an entity. pokeapi.com, on the otherhand, needs no authentication, and is fully open and available.-->
-    
-    <p><strong>Thanks for letting us use your APIs</strong></p>
-    
+
+      <div class="left"></div>
+      <div class="right"></div>
+
+      <p>A UVU DGM 3670 Team Project built Spring 2016</p>
+
+      <a href="http://pokeapi.co/"><p>Data provided by Pokéapi. &copy; 2016 Paul Hallett</p></a>
+      <a href="http://developer.marvel.com/"><p>Data provided by Marvel. &copy; 2014 Marvel</p></a>
+      <!-- Marvel requires a backlink if we chose to integrate images, etc. See: http://developer.marvel.com/documentation/attribution You must link to Marvel whenever you show any information from the API beyond the title and small (100px width or smaller) thumbnail of an entity. pokeapi.com, on the otherhand, needs no authentication, and is fully open and available.-->
+
+      <p><strong>Thanks for letting us use your APIs</strong></p>
+
     </footer>
-    
-     </div> <!-- end wrapper -->
-    
-    <script>
+
+  </div> <!-- end wrapper -->
+  <script src="js/app.min.js"></script>
+  <script>
   var myDataRef = new Firebase('https://blinding-heat-3803.firebaseio.com/');
-</script>
+  </script>
 
 </body>
 </html>
