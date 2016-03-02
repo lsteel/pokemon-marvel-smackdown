@@ -1,0 +1,125 @@
+@media only screen and (min-width: 1141px) {
+/*-----BODY -----*/
+	body {
+		background-color: #1ED7DB;
+		background-image:url(images/land.jpg);
+		background-repeat: repeat-x;
+		background-position: top-center;
+		}
+
+/*-----WRAPPER -----*/
+	#wrapper {
+		padding: 50px 0 50px 0;
+}
+
+/*-----CONTAINER -----*/
+#container {
+	max-width: 1140px;
+	min-width: 320px;
+	border: solid #000 .5px;
+	box-shadow: 5px 4px 5px rgba(0,0,0,.5);
+	margin: 0 auto;
+}
+	
+#content a:hover {
+	color: #fff;
+	-webkit-transition: ease-in-out 0.3s;
+	-moz-transition: ease-in-out 0.3s;
+	-o-transition: ease-in-out 0.3s;
+	transition: ease-in-out 0.3s;	
+}
+
+/*-----HEADER -----*/
+header {	
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		position: relative;
+	}
+	
+
+
+
+/*-----NAVigation -----*/
+
+
+
+/*-----IMAGES -----*/
+
+
+/*-----CONTENT -----*/
+
+
+
+
+/*--social icons--*/
+header ul.icons {
+	float: right;
+	padding-right: 65px;
+}
+
+header ul.icons li {
+	float: left;
+	margin-top: 1em;
+	margin-left: .3em;
+}
+
+header ul.icons li a {
+	display: block;
+	opacity: 0.7;
+	-webkit-transition: ease 0.2s;
+	-moz-transition: ease 0.2s;
+	-o-transition: ease 0.2s;
+	transition: ease 0.2s;
+}
+
+header ul.icons li a:hover {
+	opacity: 1;	
+}
+
+ul.gallery li a img {
+	float: left;
+	width: 100%;
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;	
+}
+
+ul.gallery li a:hover img {
+	box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+/*----- FOOTER -----*/
+
+footer {
+	width: 1200px;
+	margin: auto;
+	position: relative;
+}
+
+
+
+footer .left {
+	position: absolute;
+	top: -30px;
+	left: 0;
+	width: 30px;
+	height: 30px;
+	border-right: 30px solid black;
+	border-top: 30px solid transparent;
+}
+
+footer .right {
+	position: absolute;
+	top: -30px;
+	right: 0;
+	width: 30px;
+	height: 30px;
+	border-left: 30px solid black;
+	border-top: 30px solid transparent;
+}
+
