@@ -67,7 +67,7 @@ gulp.task('scripts.watch', ['scripts'], function () {
 gulp.task('styles', function () {
   return gulp.src(lib.ext('css').files.concat('src/styles/**/*.css'))
     .pipe(sourcemaps.init())
-      .pipe(please())
+      //.pipe(please())
       .pipe(concat('app.min.css'))
     //.pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest('build/css'));
