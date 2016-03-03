@@ -3,3 +3,9 @@ node_modules
 thumbs.db
 *.log
 build
+
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
