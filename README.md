@@ -4,7 +4,7 @@
 
 ####Instructions:
 
-1. Fork this.
+1. Fork this hoser.
 
 2. Clone yours.
 
