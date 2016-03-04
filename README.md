@@ -17,3 +17,5 @@
 6. Run `gulp watch` in the terminal from the directory.
 
 7. The `build` folder created is the distribution files. It will contain the minified html, css, js, and even have the images optimized for the web!
+
+8. Point your browser to `localhost:8000` to run this app.
