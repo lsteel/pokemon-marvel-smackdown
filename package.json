@@ -1,5 +1,5 @@
 {
-  "name": "todo-app",
+  "name": "pokemon-marvel-smackdown",
   "version": "1.0.0",
   "description": "This is an (almost) empty repository, meant for you to fill (from scratch) to make a front end app using modern web development build tools.",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lsteel/todo-app.git"
+    "url": "https://github.com/lsteel/pokemon-marvel-smackdown.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lsteel/todo-app/issues"
+    "url": "https://github.com/lsteel/pokemon-marvel-smackdown/issues"
   },
-  "homepage": "https://github.com/lsteel/todo-app",
+  "homepage": "https://github.com/lsteel/pokemon-marvel-smackdown",
   "devDependencies": {
     "bower-files": "^3.11.3",
     "express": "^4.13.3",
