@@ -4,7 +4,7 @@
 
 ####Instructions:
 
-1. Fork this hoser (Test Branch).
+1. Fork this hoser (Master Branch).
 
 2. Clone yours.
 
