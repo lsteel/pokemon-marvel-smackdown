@@ -4,7 +4,7 @@
 
 ####Instructions:
 
-1. This line inserted by Master branch
+1. Fork this hoser (Test Branch).
 
 2. Clone yours.
 
