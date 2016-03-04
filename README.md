@@ -4,9 +4,9 @@
 
 ####Instructions:
 
-1. Fork this Eh!
+1. Fork this.
 
-2. Clone yours ya Hoser!
+2. Clone yours.
 
 3. Run `npm install` in the terminal from the directory.
 
