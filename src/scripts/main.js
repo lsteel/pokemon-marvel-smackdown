@@ -9,7 +9,6 @@
 // Start Custom Scripts
 
 window.onload = function() {
-  var project = {};
 
   project.init();
 
