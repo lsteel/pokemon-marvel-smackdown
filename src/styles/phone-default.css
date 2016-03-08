@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*-----Prevents iPhone from resizing in landscape mode -----*/
 html {-webkit-text-size-adjust: none; }
 
@@ -127,3 +128,5 @@ footer p {
 .KeepOpen {
 	clear: both;	
 }
+=======
+>>>>>>> 73c0b3ef01fd653f01267f077d71f6a03c708e31
