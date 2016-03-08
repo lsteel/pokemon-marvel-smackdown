@@ -21,13 +21,6 @@
 	margin: 0 auto;
 }
 	
-#content a:hover {
-	color: #fff;
-	-webkit-transition: ease-in-out 0.3s;
-	-moz-transition: ease-in-out 0.3s;
-	-o-transition: ease-in-out 0.3s;
-	transition: ease-in-out 0.3s;	
-}
 
 /*-----HEADER -----*/
 header {	

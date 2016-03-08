@@ -67,13 +67,13 @@ header h2 {
 #content {
 	min-height: 30em;
 	background-color: #eee;
-	background-image: url(images/halftone.png);
 }
+
 #content h1 {
 	font-family: 'Oswald', sans-serif;
 	margin: .3em 2% 0 2%;
 	font-size: 1.5em;
-	color: #468966;
+	color: #1ED7DB;
 }
 #content p {
 	padding: .5em;
@@ -111,6 +111,11 @@ footer {
 footer a p {
 	color: #F7F7F7;
 	font-size: 1.3em;
+}
+
+footer a:hover p {
+	color: white;
+	opacity: .8;	
 }
 
 footer p {

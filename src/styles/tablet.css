@@ -21,28 +21,6 @@ nav {
 	background-color: #b64926;
 }
 
-nav ul {
-	padding: 0;	
-}
-
-nav ul li {
-	width: auto;
-	margin: 0;	
-}
-
-nav ul li a {
-	float: left;
-	border: none;
-	border-radius: 0px;
-	margin: 0;
-	
-	padding: 1em .5em;
-	font-weight: 400;
-	font-size: .8em;
-	border-right: solid 1px rgba(0,0,0,0.2);
-	border-left: solid 1px rgba(255,255,255,0.2);
-}
-
 
 /*-----IMAGES -----*/
 
