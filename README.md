@@ -22,5 +22,5 @@
 
 1. Point your browser to `localhost:8000` to run this app.
 
-**Data Base Explination
+##Data Base Explination
 We will be using the Pokemon API and the Marvel API to pit characters from each against each other in a simple text battle. The Database will cache the data from the respective APIs.
