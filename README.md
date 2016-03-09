@@ -21,3 +21,6 @@
 1. The `build` folder created is the distribution files. It will contain the minified html, css, js, and even have the images optimized for the web!
 
 1. Point your browser to `localhost:8000` to run this app.
+
+**Data Base Explination
+We will be using the Pokemon API and the Marvel API to pit characters from each against each other in a simple text battle. The Database will cache the data from the respective APIs.
