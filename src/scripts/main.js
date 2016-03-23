@@ -41,15 +41,22 @@ project.init = function(){
   var pokemonChar = {};
   var marvelChar = {};
 
-  $.ajax({
-    method: "GET",
-    url: "http://gateway.marvel.com:80/v1/public/characters?apikey=d6af5b05ba9896e4c91f6a2881c8bbcc"
-  }).done(function(data) {
-    console.log(data);
-    marvelData = data.results;
-    getFirebaseData("marvel");
-    setFirebaseData(marvelData, "marvel");
-  });
+  // $.ajax({
+  //   method: "GET",
+  //   url: "http://gateway.marvel.com:80/v1/public/characters?apikey=d6af5b05ba9896e4c91f6a2881c8bbcc"
+  // }).done(function(data) {
+  //   console.log(data);
+  //   marvelData = data.results;
+  //   getFirebaseData("marvel");
+  //   setFirebaseData(marvelData, "marvel");
+  // });
+
+   $.getJSON("http://gateway.marvel.com:80/v1/public/characters?apikey=d6af5b05ba9896e4c91f6a2881c8bbcc", function(data) {
+     marvelData = data.data.results;
+     console.log(marvelData);
+     getFirebaseData("marvel");
+     setFirebaseData(marvelData, "marvel");
+   });
 
   // Example marvelData:
   // {
@@ -95,12 +102,19 @@ project.init = function(){
   //   }
   // }
 
-  $.ajax({
-    method: "GET",
-    url: "https://pokeapi.co/api/v2/pokemon?limit=151"
-  }).done(function(data) {
-    console.log(data);
+  // $.ajax({
+  //   method: "GET",
+  //   url: "https://pokeapi.co/api/v2/pokemon?limit=151"
+  // }).done(function(data) {
+  //   console.log(data);
+  //   pokemonData = data.results;
+  //   getFirebaseData("pokemon");
+  //   setFirebaseData(pokemonData, "pokemon");
+  // });
+
+  $.getJSON("https://pokeapi.co/api/v2/pokemon?limit=151", function(data) {
     pokemonData = data.results;
+    console.log(pokemonData);
     getFirebaseData("pokemon");
     setFirebaseData(pokemonData, "pokemon");
   });
