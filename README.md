@@ -12,6 +12,8 @@
 
 1. Install Bower globally if you have not yet. `npm install -g bower`
 
+1. Install Gulp globally if you have not yet. `npm install -g gulp`
+
 1. Run `bower install` in the terminal from the directory.
 
 1. Do your code in the `src` files.
