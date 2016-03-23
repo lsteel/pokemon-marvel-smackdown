@@ -10,7 +10,7 @@ bookRouter.route('/')
 
 bookRouter.use('/:bookId', function(req,res,next){
 	Book.findById(req.params.bookId, function(err,book){
-			if(err) 
+			if(err)
 				res.status(500).send(err);
 			else if (book)
 			{
@@ -30,18 +30,18 @@ bookRouter.route('/:bookId')
 		var returnBook = req.book.toJSON();
 
 		returnBook.links = {};
-		var newLink = 'http://' + req.headers.host + '/api/books/?genre=' + returnBook.genre;
+		//var newLink = 'http://' + req.headers.host + '/api/books/?genre=' + returnBook.genre;
 		returnBook.links.FilterByThisGenre = newLink.replace(' ', '%20');
 		res.json(returnBook);
-		
+
 	})
-	.put(function(req,res){		
+	.put(function(req,res){
 		req.book.title = req.body.title;
 		req.book.author = req.body.author;
 		req.book.genre = req.body.genre;
 		req.book.read = req.body.read;
 		req.book.save(function(err){
-			if(err) 
+			if(err)
 				res.status(500).send(err);
 			else{
 				res.json(req.book);
@@ -58,7 +58,7 @@ bookRouter.route('/:bookId')
 		}
 
 		req.book.save(function(err){
-			if(err) 
+			if(err)
 				res.status(500).send(err);
 			else{
 				res.json(req.book);
