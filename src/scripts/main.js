@@ -272,7 +272,9 @@ return;
 
     // In the calback function of ".on()"
     // Generate a random whole number between 1 and the length of the received array.
-
+    function .on() {
+        return Math.random() * (151 - 1) + 1;
+    }
 
     // Use that random number as an index for the received array to grab a random character.
     // Set var character to the index of the received array.
