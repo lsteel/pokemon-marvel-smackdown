@@ -132,7 +132,7 @@ header h2 {
 /*-----CONTENT -----*/
 #content {
 	min-height: 30em;
-	background-color: #eee;
+	background-color: white;
 }
 
 #content h1 {
@@ -147,7 +147,21 @@ header h2 {
 }
 
 #content h3 {
-	margin: auto;	
+	text-align: center;
+	margin-top: 1em;	
+}
+
+img.trainer {
+	width: 21%;
+	margin-left: 2%;
+	margin-top: 2%;
+}
+
+img.stan {
+	width: 21%;
+	margin-right: 2%;
+	margin-top: 8%;
+	float: right;
 }
 
 a:link {
