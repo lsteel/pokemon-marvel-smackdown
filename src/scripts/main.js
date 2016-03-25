@@ -112,7 +112,7 @@ project.init = function(){
   //   setFirebaseData(pokemonData, "pokemon");
   // });
 
-  $.getJSON("https://pokeapi.co/api/v2/pokemon?limit=151", function(data) {
+  $.getJSON("http://pokeapi.co/api/v2/pokemon?limit=151", function(data) {
     pokemonData = data.results;
     console.log(pokemonData);
     getFirebaseData("pokemon");
@@ -171,85 +171,93 @@ project.init = function(){
 
     // SET the new array as the new firebase pokemon reference "ref"
 
-if (type === pokemon) {
-    function writer(element, index, array) {
-    document.write(" index: " + index);
-    document.write( <img src=imageURL alt="Pokemon"> ); //should this just be imageURL?
-    document.write("Name: " + name);
-    document.write("<br />");
-
-    pokeNom[index] = {...}; //I don't know what to do with this
-
-    pokeNom = ref; //to set the new array as the new firebase pokemon reference... I think?
-    }
-
-  var pokeNom = [
-       {
-         'name': 'bulbasaur',
-         'imageURL': 'http://pokeapi.co/media/sprites/pokemon/' + (index + 1) + '.png'
-       },
-       {
-         'name': 'ivysaur',
-         'imageURL': 'http://pokeapi.co/media/sprites/pokemon/' + (index + 1) + '.png'
-       }
-     ];
-
-pokemonData.forEach(writer); 
-   
-};
-
-} else if (type === marvel) {
-    var marvelNom = [
-       {
-         'name': '3-D Man',
-         'imageURL': marvelData.thumbnail.path + "standard_fantastic" + marvelData.thumbnail.extension
-       },
-     ]
-  pokemonData.forEach(function writer(element, index, array) {
-    document.write(" index: " + index);
-    document.write( <img src=imageURL alt="Marvel"> ); //should this just be imageURL?
-    document.write("Name: " + name);
-    document.write("<br />");
-       marvelNom[index] = {...}; //I don't know what to do with this
-
-       marvelNom = ref; //to set the new array as the new firebase marvel reference... I think?
-});
-
-} else {
-console.log("ERROR! API " + type + " is not recognized.")
-return;
-}
+// if (type === pokemon) {
+//     function writer(element, index, array) {
+//     document.write(" index: " + index);
+//     document.write( <img src=imageURL alt="Pokemon"> ); //should this just be imageURL?
+//     document.write("Name: " + name);
+//     document.write("<br />");
+//
+//     pokeNom[index] = {...}; //I don't know what to do with this
+//
+//     pokeNom = ref; //to set the new array as the new firebase pokemon reference... I think?
+//     }
+//
+//   var pokeNom = [
+//        {
+//          'name': 'bulbasaur',
+//          'imageURL': 'http://pokeapi.co/media/sprites/pokemon/' + (index + 1) + '.png'
+//        },
+//        {
+//          'name': 'ivysaur',
+//          'imageURL': 'http://pokeapi.co/media/sprites/pokemon/' + (index + 1) + '.png'
+//        }
+//      ];
+//
+// pokemonData.forEach(writer);
+//
+// };
+//
+// } else if (type === marvel) {
+//     var marvelNom = [
+//        {
+//          'name': '3-D Man',
+//          'imageURL': marvelData.thumbnail.path + "standard_fantastic" + marvelData.thumbnail.extension
+//        },
+//      ]
+//   pokemonData.forEach(function writer(element, index, array) {
+//     document.write(" index: " + index);
+//     document.write( <img src=imageURL alt="Marvel"> ); //should this just be imageURL?
+//     document.write("Name: " + name);
+//     document.write("<br />");
+//        marvelNom[index] = {...}; //I don't know what to do with this
+//
+//        marvelNom = ref; //to set the new array as the new firebase marvel reference... I think?
+// });
+//
+// } else {
+// console.log("ERROR! API " + type + " is not recognized.")
+// return;
+// }
 
 
 
 
 
     // If "type" is equal to "marvel", do the stuff below.
+    if (type === "marvel") {
+      // Use the "data" from "marvelData" to construct a new array using the "forEach" method
+      // Declare a new array variable - var something = [];
+      var marvelCharacters = [];
+      marvelData.forEach(function(element, index, array) {
+      marvelCharacters[index] = {
+        "name": element.name,
+        "imageURL": element.thumbnail.path + "/standard_fantastic." + element.thumbnail.extension
+      }
+      });
+      console.log(marvelCharacters);
 
+      //Run the forEach method on marvelData.
+      // Example "forEach" method:
+      // marvelData.forEach(function(element, index, array) {
+      //   ... your code here...
+      //   something[index] = {...};
+      // });
+      //
+      //New Array Example:
+      // [
+      //   {
+      //     'name': '3-D Man',
+      //     'imageURL': marvelData.thumbnail.path + "standard_fantastic" + marvelData.thumbnail.extension
+      //   },
+      //   {
+      //     ...etc...
+      //   }
+      // ]
 
-    // Use the "data" from "marvelData" to construct a new array using the "forEach" method
-    // Declare a new array variable - var something = [];
-
-
-    //Run the forEach method on marvelData.
-    // Example "forEach" method:
-    // marvelData.forEach(function(element, index, array) {
-    //   ... your code here...
-    //   something[index] = {...};
-    // });
-    //
-    //New Array Example:
-    // [
-    //   {
-    //     'name': '3-D Man',
-    //     'imageURL': marvelData.thumbnail.path + "standard_fantastic" + marvelData.thumbnail.extension
-    //   },
-    //   {
-    //     ...etc...
-    //   }
-    // ]
-
-    // SET the new array as the new firebase marvel reference "ref"
+      // SET the new array as the new firebase marvel reference "ref"
+      ref.set(marvelCharacters);
+    }
 
   }
 
