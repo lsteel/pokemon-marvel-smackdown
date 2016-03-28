@@ -132,7 +132,7 @@ header h2 {
 /*-----CONTENT -----*/
 #content {
 	min-height: 30em;
-	background-color: #eee;
+	background-color: white;
 }
 
 #content h1 {
@@ -144,6 +144,24 @@ header h2 {
 #content p {
 	padding: .5em;
 	line-height: 120%;
+}
+
+#content h3 {
+	text-align: center;
+	margin-top: 1em;
+}
+
+img.trainer {
+	width: 21%;
+	margin-left: 2%;
+	margin-top: 2%;
+}
+
+img.stan {
+	width: 21%;
+	margin-right: 2%;
+	margin-top: 8%;
+	float: right;
 }
 
 a:link {
@@ -162,6 +180,20 @@ a:active {
     text-decoration: none;
 }
 
+ input.button {
+	color:white;
+	padding: 1em;
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	background-color:#393939;
+	border-radius: 25px;
+	margin-top: 2em;
+	}
+
+	input.button:hover {
+		color:#EC3333;
+		transition: ease 1s;
+	}
 
 
 /*----- FOOTER -----*/
