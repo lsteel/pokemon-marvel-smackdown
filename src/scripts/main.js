@@ -112,7 +112,7 @@ project.init = function(){
   //   setFirebaseData(pokemonData, "pokemon");
   // });
 
-  $.getJSON("https://pokeapi.co/api/v2/pokemon?limit=151", function(data) {
+  $.getJSON("http://pokeapi.co/api/v2/pokemon?limit=151", function(data) {
     pokemonData = data.results;
     console.log(pokemonData);
     getFirebaseData("pokemon");
@@ -144,10 +144,19 @@ project.init = function(){
 
     // CHECK IF "type" is "pokemon" or if "type" is "marvel"
     // If "type" is equal to "pokemon", do the stuff below.
+    if (type === "pokemon") {
 
 
     // Use the "data" from "pokemonData" to construct a new array using the "forEach" method
     // Declare a new array variable - var something = [];
+    var pokeCharacters = [];
+      pokemonData.forEach(function(element, index, array) {
+      pokeCharacters[index] = {
+        "name": element.name,
+        'imageURL': 'http://pokeapi.co/media/sprites/pokemon/' + (index + 1) + '.png'
+      }
+      });
+      console.log(pokeCharacters);
 
 
     //Run the forEach method on pokemonData.
@@ -170,86 +179,42 @@ project.init = function(){
     // ]
 
     // SET the new array as the new firebase pokemon reference "ref"
-
-if (type === pokemon) {
-    function writer(element, index, array) {
-    document.write(" index: " + index);
-    document.write( <img src=imageURL alt="Pokemon"> ); //should this just be imageURL?
-    document.write("Name: " + name);
-    document.write("<br />");
-
-    pokeNom[index] = {...}; //I don't know what to do with this
-
-    pokeNom = ref; //to set the new array as the new firebase pokemon reference... I think?
-    }
-
-  var pokeNom = [
-       {
-         'name': 'bulbasaur',
-         'imageURL': 'http://pokeapi.co/media/sprites/pokemon/' + (index + 1) + '.png'
-       },
-       {
-         'name': 'ivysaur',
-         'imageURL': 'http://pokeapi.co/media/sprites/pokemon/' + (index + 1) + '.png'
-       }
-     ];
-
-pokemonData.forEach(writer); 
-   
-};
-
-} else if (type === marvel) {
-    var marvelNom = [
-       {
-         'name': '3-D Man',
-         'imageURL': marvelData.thumbnail.path + "standard_fantastic" + marvelData.thumbnail.extension
-       },
-     ]
-  pokemonData.forEach(function writer(element, index, array) {
-    document.write(" index: " + index);
-    document.write( <img src=imageURL alt="Marvel"> ); //should this just be imageURL?
-    document.write("Name: " + name);
-    document.write("<br />");
-       marvelNom[index] = {...}; //I don't know what to do with this
-
-       marvelNom = ref; //to set the new array as the new firebase marvel reference... I think?
-});
-
-} else {
-console.log("ERROR! API " + type + " is not recognized.")
-return;
-}
-
-
-
-
+    ref.set(pokeCharacters);
 
     // If "type" is equal to "marvel", do the stuff below.
+    if (type === "marvel") {
+      // Use the "data" from "marvelData" to construct a new array using the "forEach" method
+      // Declare a new array variable - var something = [];
+      var marvelCharacters = [];
+      marvelData.forEach(function(element, index, array) {
+      marvelCharacters[index] = {
+        "name": element.name,
+        "imageURL": element.thumbnail.path + "/standard_fantastic." + element.thumbnail.extension
+      }
+      });
+      console.log(marvelCharacters);
 
+      //Run the forEach method on marvelData.
+      // Example "forEach" method:
+      // marvelData.forEach(function(element, index, array) {
+      //   ... your code here...
+      //   something[index] = {...};
+      // });
+      //
+      //New Array Example:
+      // [
+      //   {
+      //     'name': '3-D Man',
+      //     'imageURL': marvelData.thumbnail.path + "standard_fantastic" + marvelData.thumbnail.extension
+      //   },
+      //   {
+      //     ...etc...
+      //   }
+      // ]
 
-    // Use the "data" from "marvelData" to construct a new array using the "forEach" method
-    // Declare a new array variable - var something = [];
-
-
-    //Run the forEach method on marvelData.
-    // Example "forEach" method:
-    // marvelData.forEach(function(element, index, array) {
-    //   ... your code here...
-    //   something[index] = {...};
-    // });
-    //
-    //New Array Example:
-    // [
-    //   {
-    //     'name': '3-D Man',
-    //     'imageURL': marvelData.thumbnail.path + "standard_fantastic" + marvelData.thumbnail.extension
-    //   },
-    //   {
-    //     ...etc...
-    //   }
-    // ]
-
-    // SET the new array as the new firebase marvel reference "ref"
+      // SET the new array as the new firebase marvel reference "ref"
+      ref.set(marvelCharacters);
+    }
 
   }
 
@@ -272,10 +237,10 @@ return;
 
     // In the calback function of ".on()"
     // Generate a random whole number between 1 and the length of the received array.
-    function .on() {
-        return Math.random() * (151 - 1) + 1;
+    function pokemonName(0, 150) {
+        return Math.floor(Math.random() * arr.length;
     }
-
+firebaseRef.on('value', function(dataSnapshot) {
     // Use that random number as an index for the received array to grab a random character.
     // Set var character to the index of the received array.
     // var pokemonChar = receivedData[29]
@@ -283,19 +248,30 @@ return;
 
 
     // Get the html dom element with ID of "pokemonName" and set its "innerText" to "pokemonChar.name"
-
+var pokemonChar = pokemonChar.name("Pokemon")[0].get(pokemonName);
+var pokemonChar = Element.pokemonName(pokemonChar.name);
 
     // Get the html dom element with ID of "pokemonImg" and set its "src" "attribute" to "pokemonChar.imageURL"
+.get(pokemonImg) src="pokemonChar.imageURL"
+var pokemonName(pokemonImg) src="pokemonChar.imageURL"
 
+var pokemonName = marvel;
+var type;
+var name;
 
-
-
+if (pokemonName = pokemon) {
+    type = true;
+    name = pokemonChar;
+}
     // else If "type" is equal to "marvel", use "var marvelChar".
-
-
+else if (pokemonName = marvel) {
+    type = true;
+    name = marvelChar;
+    }
+console.log(name);
     // Get the html dom element with ID of "marvelName" and set its "innerText" to "marvelChar.name"
 
-
+var marvelChar = Element.pokemonName(pokemonChar.name);
     // Get the html dom element with ID of "marvelImg" and set its "src" "attribute" to "marvelChar.imageURL"
 
   }
