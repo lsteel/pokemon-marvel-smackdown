@@ -6,16 +6,23 @@
 
 1. Fork this.
 
-2. Clone yours.
+1. Clone yours.
 
-3. Run `npm install` in the terminal from the directory.
+1. Run `npm install` in the terminal from the directory.
 
-4. Run `bower install` in the terminal from the directory.
+1. Install Bower globally if you have not yet. `npm install -g bower`
 
-5. Do your code in the `src` files.
+1. Install Gulp globally if you have not yet. `npm install -g gulp`
 
-6. Run `gulp watch` in the terminal from the directory.
+1. Run `bower install` in the terminal from the directory.
 
-7. The `build` folder created is the distribution files. It will contain the minified html, css, js, and even have the images optimized for the web!
+1. Do your code in the `src` files.
 
-8. Point your browser to `localhost:8000` to run this app.
+1. Run `gulp watch` in the terminal from the directory.
+
+1. The `build` folder created is the distribution files. It will contain the minified html, css, js, and even have the images optimized for the web!
+
+1. Point your browser to `localhost:8000` to run this app.
+
+##Data Base Explination
+We will be using the Pokemon API and the Marvel API to pit characters from each against each other in a simple text battle. The Database will cache the data from the respective APIs.
