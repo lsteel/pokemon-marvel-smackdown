@@ -31,7 +31,6 @@
     "imagemin-pngquant": "^4.2.0"
   },
   "dependencies": {
-    "bower-files": "^3.11.3",
     "livereload": "^0.4.1"
   }
 }

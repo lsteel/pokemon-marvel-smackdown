@@ -132,7 +132,7 @@ header h2 {
 /*-----CONTENT -----*/
 #content {
 	min-height: 30em;
-	background-color: #eee;
+	background-color: white;
 }
 
 #content h1 {
@@ -144,6 +144,26 @@ header h2 {
 #content p {
 	padding: .5em;
 	line-height: 120%;
+}
+
+#content h3 {
+	text-align: center;
+	font-family: 'VT323';
+	font-size:1.5em;
+	margin-top: 1em;
+}
+
+img.trainer {
+	width: 21%;
+	margin-left: 2%;
+	margin-top: 90px;
+}
+
+img.stan {
+	width: 21%;
+	margin-right: 2%;
+	margin-top: 2%;
+	float: right;
 }
 
 a:link {
@@ -162,7 +182,31 @@ a:active {
     text-decoration: none;
 }
 
+ input.button {
+	color:white;
+	padding: 1em;
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	background-color:#393939;
+	border-radius: 25px;
+	margin-top: 2em;
+	}
 
+	input.button:hover {
+		color:#EC3333;
+		transition: ease 1s;
+	}
+div #button {
+	text-align:center;
+}
+ .pokemon-image{
+	 width:25%;
+
+ }
+ .marvel-image{
+	 width:25%;
+
+ }
 
 /*----- FOOTER -----*/
 footer {
@@ -252,6 +296,24 @@ nav {
 
 
 
+/*-----NAVigation -----*/
+nav {
+	background-color: #b64926;
+}
+
+
+/*-----IMAGES -----*/
+
+/*-----CONTENT -----*/
+
+
+
+/*----- FOOTER -----*/
+
+} /*end media query tablet*/
+
+
+
 
 
 
@@ -271,40 +333,40 @@ nav {
 
 @media only screen and (min-width: 1141px) {
   /*-----BODY -----*/
-  body {
-    background-color: #1ED7DB;
-    background-image:url(images/land.jpg);
-    background-repeat: repeat-x;
-    background-position: top-center;
-  }
+	body {
+		background-color: #1ED7DB;
+		background-repeat: repeat-x;
+		background-position: top-center;
+		}
 
-  /*-----WRAPPER -----*/
-  #wrapper {
-    padding: 50px 0 50px 0;
-  }
+/*-----WRAPPER -----*/
+	#wrapper {
+		padding: 50px 0 50px 0;
+}
 
-  /*-----CONTAINER -----*/
-  #container {
-    max-width: 1140px;
-    min-width: 320px;
-    border: solid #000 .5px;
-    box-shadow: 5px 4px 5px rgba(0,0,0,.5);
-    margin: 0 auto;
-  }
+/*-----CONTAINER -----*/
+#container {
+	max-width: 1140px;
+	min-width: 320px;
+	border: solid #000 .5px;
+	box-shadow: 5px 4px 5px rgba(0,0,0,.5);
+	margin: 0 auto;
+}
 
-  #content a:hover {
-    color: #fff;
-    -webkit-transition: ease-in-out 0.3s;
-    -moz-transition: ease-in-out 0.3s;
-    -o-transition: ease-in-out 0.3s;
-    transition: ease-in-out 0.3s;
-  }
-   #content a {
-	color:#EC3333;
-	padding: 1em;
-	font-family: 'Oswald', sans-serif;
-	background-color:#393939;
-	}
+
+#content a:hover {
+  color: #fff;
+  -webkit-transition: ease-in-out 0.3s;
+  -moz-transition: ease-in-out 0.3s;
+  -o-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+ #content a {
+color:#EC3333;
+padding: 1em;
+font-family: 'Oswald', sans-serif;
+background-color:#393939;
+}
 
   /*-----HEADER -----*/
   header {
