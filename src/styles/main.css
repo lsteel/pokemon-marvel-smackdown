@@ -148,19 +148,21 @@ header h2 {
 
 #content h3 {
 	text-align: center;
+	font-family: 'VT323';
+	font-size:1.5em;
 	margin-top: 1em;
 }
 
 img.trainer {
 	width: 21%;
 	margin-left: 2%;
-	margin-top: 2%;
+	margin-top: 90px;
 }
 
 img.stan {
 	width: 21%;
 	margin-right: 2%;
-	margin-top: 8%;
+	margin-top: 2%;
 	float: right;
 }
 
@@ -194,7 +196,17 @@ a:active {
 		color:#EC3333;
 		transition: ease 1s;
 	}
-
+div #button { 
+	text-align:center;
+}
+ .pokemon-image{
+	 width:25%;
+	 
+ }
+ .marvel-image{
+	 width:25%;
+	  
+ }
 
 /*----- FOOTER -----*/
 footer {
