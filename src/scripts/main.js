@@ -216,59 +216,60 @@ project.init = function(){
       // SET the new array as the new firebase marvel reference "ref"
       ref.set(marvelCharacters);
     }
+  }
 
 
 
-    // NO MORE FOR JARED
-
-
-
-
-
-
-
-    function getFirebaseData(type) {
-      //ERIN, DO YOUR CODE AFTER THIS LINE, IN THIS FUNCTION
-      var ref = new Firebase('https://blinding-heat-3803.firebaseio.com/' + type);
-
-      // Watch the data from firebase reference for changes/updates/ and get the data.
-      //You'll us the ".on()" method linked below
-      // https://www.firebase.com/docs/web/api/query/on.html
-
-
-      // In the calback function of ".on()"
-      // Generate a random whole number between 1 and the length of the received array.
-
-
-      // Use that random number as an index for the received array to grab a random character.
-      // Set var character to the index of the received array.
-      // var pokemonChar = receivedData[29]
-      // If "type" is equal to "pokemon", use "var pokemonChar".
-
-
-      // Get the html dom element with ID of "pokemonName" and set its "innerText" to "pokemonChar.name"
-
-
-      // Get the html dom element with ID of "pokemonImg" and set its "src" "attribute" to "pokemonChar.imageURL"
-
-
-
-
-      // else If "type" is equal to "marvel", use "var marvelChar".
-
-
-      // Get the html dom element with ID of "marvelName" and set its "innerText" to "marvelChar.name"
-
-
-      // Get the html dom element with ID of "marvelImg" and set its "src" "attribute" to "marvelChar.imageURL"
-
-    }
-
-    // NO MORE FOR ERIN
+  // NO MORE FOR JARED
 
 
 
 
 
 
-  };
+
+  function getFirebaseData(type) {
+    //ERIN, DO YOUR CODE AFTER THIS LINE, IN THIS FUNCTION
+    var ref = new Firebase('https://blinding-heat-3803.firebaseio.com/' + type);
+
+    // Watch the data from firebase reference for changes/updates/ and get the data.
+    //You'll us the ".on()" method linked below
+    // https://www.firebase.com/docs/web/api/query/on.html
+
+
+    // In the calback function of ".on()"
+    // Generate a random whole number between 1 and the length of the received array.
+
+
+    // Use that random number as an index for the received array to grab a random character.
+    // Set var character to the index of the received array.
+    // var pokemonChar = receivedData[29]
+    // If "type" is equal to "pokemon", use "var pokemonChar".
+
+
+    // Get the html dom element with ID of "pokemonName" and set its "innerText" to "pokemonChar.name"
+
+
+    // Get the html dom element with ID of "pokemonImg" and set its "src" "attribute" to "pokemonChar.imageURL"
+
+
+
+
+    // else If "type" is equal to "marvel", use "var marvelChar".
+
+
+    // Get the html dom element with ID of "marvelName" and set its "innerText" to "marvelChar.name"
+
+
+    // Get the html dom element with ID of "marvelImg" and set its "src" "attribute" to "marvelChar.imageURL"
+
+  }
+
+  // NO MORE FOR ERIN
+
+
+
+
+
+
+};
