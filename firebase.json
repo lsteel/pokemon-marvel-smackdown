@@ -1,0 +1,9 @@
+{
+  "firebase": "blinding-heat-3803",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

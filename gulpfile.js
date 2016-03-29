@@ -121,7 +121,9 @@ gulp.task('templates.watch', ['templates'], function () {
 gulp.task('server', function () {
   var app = express();
   app.use(express.static('build'));
-  app.listen(8000);
+  app.listen(8000, function() {
+    console.log('Server listening on port 8000');
+  });
 });
 
 
