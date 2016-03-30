@@ -196,16 +196,16 @@ a:active {
 		color:#EC3333;
 		transition: ease 1s;
 	}
-div #button {
+div #button { 
 	text-align:center;
 }
  .pokemon-image{
 	 width:25%;
-
+	 
  }
  .marvel-image{
 	 width:25%;
-
+	  
  }
 
 /*----- FOOTER -----*/
@@ -275,24 +275,6 @@ header img.headerimage {
 header h1 {
 
 }
-
-
-
-/*-----NAVigation -----*/
-nav {
-	background-color: #b64926;
-}
-
-
-/*-----IMAGES -----*/
-
-/*-----CONTENT -----*/
-
-
-
-/*----- FOOTER -----*/
-
-} /*end media query tablet*/
 
 
 
