@@ -403,7 +403,9 @@ background-color:#393939;
     -o-transform: scale(1.2);
     transform: scale(1.2);
   }
+} /*end media query desktop*/
 
+@media only screen and (min-width: 1200px) {
   /*----- FOOTER -----*/
 
   footer {
@@ -418,7 +420,7 @@ background-color:#393939;
     position: absolute;
     top: -30px;
     left: 0;
-    width: 30px;
+    width: 0px;
     height: 30px;
     border-right: 30px solid black;
     border-top: 30px solid transparent;
@@ -428,10 +430,9 @@ background-color:#393939;
     position: absolute;
     top: -30px;
     right: 0;
-    width: 30px;
+    width: 0px;
     height: 30px;
     border-left: 30px solid black;
     border-top: 30px solid transparent;
   }
-
-} /*end media query desktop*/
+} /*end media query desktop/footer only*/
