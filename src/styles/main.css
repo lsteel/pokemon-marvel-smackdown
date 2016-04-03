@@ -156,6 +156,7 @@ header h2 {
 img.trainer {
 	width: 21%;
 	margin-left: 2%;
+	margin-right: 2%;
 	margin-top: 90px;
 }
 
@@ -202,12 +203,14 @@ div #button {
 }
  .pokemon-image{
 	 width:25%;
-
+	 
  }
  .marvel-image{
 	 width:25%;
-	margin-right: 0%;
+	 
  }
+ 
+ 
 
 /*----- FOOTER -----*/
 footer {
