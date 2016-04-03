@@ -83,6 +83,7 @@ body {
 	background-color: #393939;   /*nav background color*/
 	min-width: 320px;
 	max-width: 1140px;
+	overflow: hidden;
 }
 
 /*-----HEADER -----*/
@@ -202,12 +203,12 @@ div #button {
 	text-align:center;
 }
  .pokemon-image{
-	 width:25%;
-	 
+	 width:23%;
+	 margin-right: 2%;
  }
  .marvel-image{
-	 width:25%;
-	 
+	 width:23%;
+	 margin-right: 2%;
  }
  
  
