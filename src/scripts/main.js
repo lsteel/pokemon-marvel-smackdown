@@ -235,25 +235,34 @@ project.init = function(){
     // https://www.firebase.com/docs/web/api/query/on.html
 
 
+    ref.on('value', function(dataSnapshot) {
+        //dataSnapshot.forEach(); or whatever dataSnapshot methods
+        data = dataSnapshot.val();
+        debugger
+    });
+
+
     // In the calback function of ".on()"
     // Generate a random whole number between 1 and the length of the received array.
-    function pokemonName(0, 150) {
-        return Math.floor(Math.random() * arr.length;
+    function pokemonName() {
+        return Math.floor(Math.random(0, arr.length));
     }
+  };
+
 firebaseRef.on('value', function(dataSnapshot) {
     // Use that random number as an index for the received array to grab a random character.
     // Set var character to the index of the received array.
     // var pokemonChar = receivedData[29]
     // If "type" is equal to "pokemon", use "var pokemonChar".
-
+var pokemonChar = receivedData[29]
 
     // Get the html dom element with ID of "pokemonName" and set its "innerText" to "pokemonChar.name"
 var pokemonChar = pokemonChar.name("Pokemon")[0].get(pokemonName);
 var pokemonChar = Element.pokemonName(pokemonChar.name);
 
     // Get the html dom element with ID of "pokemonImg" and set its "src" "attribute" to "pokemonChar.imageURL"
-.get(pokemonImg) src="pokemonChar.imageURL"
-var pokemonName(pokemonImg) src="pokemonChar.imageURL"
+.get(pokemonImg) src="pokemonChar.imageURL";
+var pokemonName(pokemonImg) src="pokemonChar.imageURL";
 
 var pokemonName = marvel;
 var type;
@@ -273,7 +282,7 @@ console.log(name);
 
 var marvelChar = Element.pokemonName(pokemonChar.name);
     // Get the html dom element with ID of "marvelImg" and set its "src" "attribute" to "marvelChar.imageURL"
-
+var marvelImg = (pokemonImg) src="pokemonChar.imageURL";
   }
 
   // NO MORE FOR ERIN
