@@ -235,22 +235,27 @@ project.init = function(){
     // https://www.firebase.com/docs/web/api/query/on.html
 
 
-    ref.on('value', function(dataSnapshot) {
+    ref.on('value', function(arr) {
         //dataSnapshot.forEach(); or whatever dataSnapshot methods
-        data = dataSnapshot.val();
+        arr.forEach();
         debugger
     });
 
 
     // In the calback function of ".on()"
     // Generate a random whole number between 1 and the length of the received array.
-    function pokemonName() {
-        return Math.floor(Math.random(0, arr.length));
-    }
   };
 
-firebaseRef.on('value', function(dataSnapshot) {
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
     // Use that random number as an index for the received array to grab a random character.
+    var pokechar = getRandomInt {
+        Index(pokechar)
+        
+    }
+        
     // Set var character to the index of the received array.
     // var pokemonChar = receivedData[29]
     // If "type" is equal to "pokemon", use "var pokemonChar".
