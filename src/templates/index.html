@@ -12,6 +12,8 @@
   <link href="http://fonts.googleapis.com/css?family=Oswald|Lato:400,700" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
 
+  <!---Jquery Reference--->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
   <!----- STYLE SHEETS ----->
   <link href="css/app.min.css" rel="stylesheet">
@@ -21,6 +23,13 @@
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
   <![endif]-->
+
+<script>
+ $(document).ready( function() {
+	$('#button').click(function() {
+	$('#red').fadeToggle();
+	});
+}); </script>
 
 </head>
 <body>
@@ -45,10 +54,10 @@
 
       <!-- page content here -->
       <div id="content">
-      
-      <img class="trainer" src="/images/red.png" alt="Pokemon Trainer">
-	<img class="pokemon-image" id="pokemon-image" src="/images/pokemon.png" alt = "pokemon" > 
-	<img class="marvel-image" src="/images/marvel.png" alt = "pokemon"> 
+
+      <img id ="red" class="trainer" src="/images/red.png" alt="Pokemon Trainer">
+	<img class="pokemon-image" id="pokemon-image" src="images/pokemon.png" alt = "pokemon" >
+	<img class="marvel-image" src="images/marvel.png" alt = "pokemon">
       <img class="stan" src="/images/stan.jpg" alt="Stan Lee">
 
       <h3>Ash chose <span></span>, Stan Lee chose <span></span></h3>
