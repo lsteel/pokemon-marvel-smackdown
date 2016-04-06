@@ -41,19 +41,8 @@ project.init = function(){
   var pokemonChar = {};
   var marvelChar = {};
 
-  // $.ajax({
-  //   method: "GET",
-  //   url: "http://gateway.marvel.com:80/v1/public/characters?apikey=d6af5b05ba9896e4c91f6a2881c8bbcc"
-  // }).done(function(data) {
-  //   console.log(data);
-  //   marvelData = data.results;
-  //   getFirebaseData("marvel");
-  //   setFirebaseData(marvelData, "marvel");
-  // });
-
   $.getJSON("http://gateway.marvel.com:80/v1/public/characters?apikey=d6af5b05ba9896e4c91f6a2881c8bbcc", function(data) {
     marvelData = data.data.results;
-    console.log(marvelData);
     getFirebaseData("marvel");
     setFirebaseData(marvelData, "marvel");
   });
@@ -102,19 +91,8 @@ project.init = function(){
   //   }
   // }
 
-  // $.ajax({
-  //   method: "GET",
-  //   url: "https://pokeapi.co/api/v2/pokemon?limit=151"
-  // }).done(function(data) {
-  //   console.log(data);
-  //   pokemonData = data.results;
-  //   getFirebaseData("pokemon");
-  //   setFirebaseData(pokemonData, "pokemon");
-  // });
-
   $.getJSON("http://pokeapi.co/api/v2/pokemon?limit=151", function(data) {
     pokemonData = data.results;
-    console.log(pokemonData);
     getFirebaseData("pokemon");
     setFirebaseData(pokemonData, "pokemon");
   });
@@ -156,7 +134,6 @@ project.init = function(){
           'imageURL': 'http://pokeapi.co/media/sprites/pokemon/' + (index + 1) + '.png'
         }
       });
-      console.log(pokeCharacters);
 
 
       //Run the forEach method on pokemonData.
@@ -193,7 +170,6 @@ project.init = function(){
           "imageURL": element.thumbnail.path + "/standard_fantastic." + element.thumbnail.extension
         }
       });
-      console.log(marvelCharacters);
 
       //Run the forEach method on marvelData.
       // Example "forEach" method:
@@ -230,72 +206,63 @@ project.init = function(){
 
   function getFirebaseData(type) {
     //ERIN, DO YOUR CODE AFTER THIS LINE, IN THIS FUNCTION
-    var ref = new Firebase('https://blinding-heat-3803.firebaseio.com/' + type);
+    var getRef = new Firebase('https://blinding-heat-3803.firebaseio.com/' + type);
 
     // Watch the data from firebase reference for changes/updates/ and get the data.
     //You'll us the ".on()" method linked below
     // https://www.firebase.com/docs/web/api/query/on.html
 
+    getRef.on('value', function(data) {
+      var fireArr = data.val();
 
-    // ref.on('value', function(arr) {
-    //     //dataSnapshot.forEach(); or whatever dataSnapshot methods
-    //     arr.forEach();
-    //     debugger
-    // });
+      // In the calback function of ".on()"
+      // Generate a random whole number between 1 and the length of the received array.
 
+      var charIndex = Math.floor(Math.random() * (fireArr.length() - 0));
 
-    // In the calback function of ".on()"
-    // Generate a random whole number between 1 and the length of the received array.
-  };
+      // Use that random number as an index for the received array to grab a random character.
+      // Set var character to the index of the received array.
 
-  // function getRandomInt(min, max) {
-  //   return Math.floor(Math.random() * (max - min)) + min;
-  // }
+      var charObj = fireArr[charIndex];
 
-    // Use that random number as an index for the received array to grab a random character.
-    // var pokechar = getRandomInt {
-    //     Index(pokechar)
-    //
-    // }
+      // If "type" is equal to "pokemon", use "var pokemonChar".
 
-    // Set var character to the index of the received array.
-    // var pokemonChar = receivedData[29]
-    // If "type" is equal to "pokemon", use "var pokemonChar".
-// var pokemonChar = receivedData[29]
+      if (type === 'pokemon') {
+        
+      }
 
-    // Get the html dom element with ID of "pokemonName" and set its "innerText" to "pokemonChar.name"
-// var pokemonChar = pokemonChar.name("Pokemon")[0].get(pokemonName);
-// var pokemonChar = Element.pokemonName(pokemonChar.name);
+      // Get the html dom element with ID of "pokemonName" and set its "innerText" to "pokemonChar.name"
+      // var pokemonChar = pokemonChar.name("Pokemon")[0].get(pokemonName);
+      // var pokemonChar = Element.pokemonName(pokemonChar.name);
 
-    // Get the html dom element with ID of "pokemonImg" and set its "src" "attribute" to "pokemonChar.imageURL"
-// .get(pokemonImg) src="pokemonChar.imageURL";
-// var pokemonName(pokemonImg) src="pokemonChar.imageURL";
+      // Get the html dom element with ID of "pokemonImg" and set its "src" "attribute" to "pokemonChar.imageURL"
+      // .get(pokemonImg) src="pokemonChar.imageURL";
+      // var pokemonName(pokemonImg) src="pokemonChar.imageURL";
 
-// var pokemonName = marvel;
-// var type;
-// var name;
-//
-// if (pokemonName = pokemon) {
-//     type = true;
-//     name = pokemonChar;
-// }
-    // else If "type" is equal to "marvel", use "var marvelChar".
-// else if (pokemonName = marvel) {
-//     type = true;
-//     name = marvelChar;
-//     }
-// console.log(name);
-    // Get the html dom element with ID of "marvelName" and set its "innerText" to "marvelChar.name"
+      // var pokemonName = marvel;
+      // var type;
+      // var name;
+      //
+      // if (pokemonName = pokemon) {
+      //     type = true;
+      //     name = pokemonChar;
+      // }
+      // else If "type" is equal to "marvel", use "var marvelChar".
+      // else if (pokemonName = marvel) {
+      //     type = true;
+      //     name = marvelChar;
+      //     }
+      // Get the html dom element with ID of "marvelName" and set its "innerText" to "marvelChar.name"
 
-// var marvelChar = Element.pokemonName(pokemonChar.name);
-    // Get the html dom element with ID of "marvelImg" and set its "src" "attribute" to "marvelChar.imageURL"
-// var marvelImg = (pokemonImg) src="pokemonChar.imageURL";
+      // var marvelChar = Element.pokemonName(pokemonChar.name);
+      // Get the html dom element with ID of "marvelImg" and set its "src" "attribute" to "marvelChar.imageURL"
+      // var marvelImg = (pokemonImg) src="pokemonChar.imageURL";
+
+    });
+    // NO MORE FOR ERIN
 
 
-  // NO MORE FOR ERIN
-
-
-
+  }
 
 
 
