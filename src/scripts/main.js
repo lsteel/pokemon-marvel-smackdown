@@ -237,60 +237,60 @@ project.init = function(){
     // https://www.firebase.com/docs/web/api/query/on.html
 
 
-    ref.on('value', function(arr) {
-        //dataSnapshot.forEach(); or whatever dataSnapshot methods
-        arr.forEach();
-        debugger
-    });
+    // ref.on('value', function(arr) {
+    //     //dataSnapshot.forEach(); or whatever dataSnapshot methods
+    //     arr.forEach();
+    //     debugger
+    // });
 
 
     // In the calback function of ".on()"
     // Generate a random whole number between 1 and the length of the received array.
   };
 
-  function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
+  // function getRandomInt(min, max) {
+  //   return Math.floor(Math.random() * (max - min)) + min;
+  // }
 
     // Use that random number as an index for the received array to grab a random character.
-    var pokechar = getRandomInt {
-        Index(pokechar)
-
-    }
+    // var pokechar = getRandomInt {
+    //     Index(pokechar)
+    //
+    // }
 
     // Set var character to the index of the received array.
     // var pokemonChar = receivedData[29]
     // If "type" is equal to "pokemon", use "var pokemonChar".
-var pokemonChar = receivedData[29]
+// var pokemonChar = receivedData[29]
 
     // Get the html dom element with ID of "pokemonName" and set its "innerText" to "pokemonChar.name"
-var pokemonChar = pokemonChar.name("Pokemon")[0].get(pokemonName);
-var pokemonChar = Element.pokemonName(pokemonChar.name);
+// var pokemonChar = pokemonChar.name("Pokemon")[0].get(pokemonName);
+// var pokemonChar = Element.pokemonName(pokemonChar.name);
 
     // Get the html dom element with ID of "pokemonImg" and set its "src" "attribute" to "pokemonChar.imageURL"
-.get(pokemonImg) src="pokemonChar.imageURL";
-var pokemonName(pokemonImg) src="pokemonChar.imageURL";
+// .get(pokemonImg) src="pokemonChar.imageURL";
+// var pokemonName(pokemonImg) src="pokemonChar.imageURL";
 
-var pokemonName = marvel;
-var type;
-var name;
-
-if (pokemonName = pokemon) {
-    type = true;
-    name = pokemonChar;
-}
+// var pokemonName = marvel;
+// var type;
+// var name;
+//
+// if (pokemonName = pokemon) {
+//     type = true;
+//     name = pokemonChar;
+// }
     // else If "type" is equal to "marvel", use "var marvelChar".
-else if (pokemonName = marvel) {
-    type = true;
-    name = marvelChar;
-    }
-console.log(name);
+// else if (pokemonName = marvel) {
+//     type = true;
+//     name = marvelChar;
+//     }
+// console.log(name);
     // Get the html dom element with ID of "marvelName" and set its "innerText" to "marvelChar.name"
 
-var marvelChar = Element.pokemonName(pokemonChar.name);
+// var marvelChar = Element.pokemonName(pokemonChar.name);
     // Get the html dom element with ID of "marvelImg" and set its "src" "attribute" to "marvelChar.imageURL"
-var marvelImg = (pokemonImg) src="pokemonChar.imageURL";
-  }
+// var marvelImg = (pokemonImg) src="pokemonChar.imageURL";
+
 
   // NO MORE FOR ERIN
 
