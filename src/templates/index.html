@@ -25,11 +25,15 @@
   <![endif]-->
 
 <script>
- $(document).ready( function() {
-	$('#button').click(function() {
-	$('#red').fadeToggle();
-	});
-}); </script>
+$(document).ready(function(){
+    $("#button").click(function(){
+        $("img.trainer").toggleClass("trainerslide"),
+		$("img.stan").toggleClass("stanslide"),
+		$('#stan').fadeToggle();
+		$('#red').fadeToggle();
+    });
+});
+</script>
 
 </head>
 <body>
@@ -55,10 +59,10 @@
       <!-- page content here -->
       <div id="content">
 
-      <div class="trainerdiv"><img id ="red" class="trainer" src="/images/red.png" alt="Pokemon Trainer"></div>
+    <div class="trainerdiv"><img id ="red" class="trainer" src="/images/red.png" alt="Pokemon Trainer"></div>
 	<div class="pokemondiv"><img class="pokemon-image" id="pokeCharacters" src="images/pokemon.png" alt = "pokemon" ></div>
 	<div class="avengerdiv"><img class="marvel-image" id="marvelCharacters" src="images/marvel.png" alt = "pokemon"></div>
-      <div class="standiv"><img class="stan" src="/images/stan.jpg" alt="Stan Lee"></div>
+    <div class="standiv"><img class="stan" id="stan" src="/images/stan.jpg" alt="Stan Lee"></div>
 
       <h3>Ash chose <span id="pokemonData"></span>, Stan Lee chose <span id="marvelData"></span></h3>
       <h3><span></span> won!</h3>
