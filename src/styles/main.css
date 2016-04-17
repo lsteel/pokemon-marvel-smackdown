@@ -154,18 +154,48 @@ header h2 {
 	margin-top: 1em;
 }
 
-img.trainer {
-	width: 21%;
+div.trainerdiv {
+	width: 22%;	
 	margin-left: 2%;
 	margin-right: 2%;
 	margin-top: 90px;
+	float: left;
+}
+
+img.trainer {
+	width: 100%;
+}
+
+div.pokemondiv {
+	width: 22%;
+	margin-right: 2%;
+	float: left;
+}
+
+ .pokemon-image{
+	width:100%;
+ }
+
+div.avengerdiv {
+	width: 22%;
+	margin-right: 2%;
+	float: left;
+}
+
+ .marvel-image{
+	 width:100%;
+ }
+
+
+div.standiv {
+	width: 22%;
+	margin-right: 2%;
+	margin-top: 2%;
+	float: left;
 }
 
 img.stan {
-	width: 21%;
-	margin-right: 2%;
-	margin-top: 2%;
-	float: right;
+	width: 100%;
 }
 
 a:link {
@@ -202,14 +232,7 @@ a:active {
 div #buttonarea {
 	text-align:center;
 }
- .pokemon-image{
-	 width:23%;
-	 margin-right: 2%;
- }
- .marvel-image{
-	 width:23%;
-	 margin-right: 2%;
- }
+
 
 
 
