@@ -166,6 +166,11 @@ img.trainer {
 	width: 100%;
 }
 
+img.trainerslide {
+	border: solid black 3px;
+	width: 50%;
+}
+
 div.pokemondiv {
 	width: 22%;
 	margin-right: 2%;
