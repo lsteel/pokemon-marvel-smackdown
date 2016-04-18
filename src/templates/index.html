@@ -28,9 +28,9 @@
 $(document).ready(function(){
     $("#button").click(function(){
         $("img.trainer").toggleClass("trainerslide"),
-		$("img.stan").toggleClass("stanslide"),
-		$('#stan').fadeToggle();
-		$('#red').fadeToggle();
+		$("img.stan").toggleClass("stanslide");
+		//$('#stan').fadeToggle();
+		//$('#red').fadeToggle();
     });
 });
 </script>
@@ -64,8 +64,10 @@ $(document).ready(function(){
 	<div class="avengerdiv"><img class="marvel-image" id="marvelCharacters" src="images/marvel.png" alt = "pokemon"></div>
     <div class="standiv"><img class="stan" id="stan" src="/images/stan.jpg" alt="Stan Lee"></div>
 
+	<div class="textdiv">
       <h3>Ash chose <span id="pokemonData"></span>, Stan Lee chose <span id="marvelData"></span></h3>
       <h3><span></span> won!</h3>
+    </div>
 
 	  <div id="buttonarea">
    <input id="button" name="submit" value="Smackdown!" type="submit" class="button"/>
