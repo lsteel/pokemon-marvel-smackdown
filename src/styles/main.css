@@ -186,26 +186,27 @@ img.trainerslide {
 
 div.pokemondiv {
 	width: 22%;
+	min-height: 132px;
 	margin-right: 2%;
 	margin-top: 2%;
 	float: left;
-	margin-bottom: 8%;
 }
 
  .pokemon-image{
 	width:100%;
+	display: none;
  }
 
 div.avengerdiv {
 	width: 22%;
 	margin-right: 2%;
 	margin-top: 2%;
-	margin-bottom: 8%;
 	float: left;
 }
 
  .marvel-image{
 	 width:100%;
+	 display: none;
  }
 
 
@@ -240,6 +241,7 @@ img.stanslide {
 div.textdiv {
 	width: 96%;
 	clear: both;	
+	display: none;
 }
 
 a:link {
@@ -275,6 +277,7 @@ a:active {
 	}
 div #buttonarea {
 	text-align:center;
+	clear: both;
 }
 
 
@@ -360,7 +363,9 @@ nav {
 
 /*-----CONTENT -----*/
 
-
+  div.pokemondiv {
+	min-height: 251px;  
+  }
 
 /*----- FOOTER -----*/
 
@@ -474,6 +479,11 @@ background-color:#393939;
     -o-transform: scale(1.2);
     transform: scale(1.2);
   }
+  
+  div.pokemondiv {
+	min-height: 251px;  
+  }
+  
 } /*end media query desktop*/
 
 @media only screen and (min-width: 1200px) {
