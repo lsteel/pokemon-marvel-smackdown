@@ -222,15 +222,12 @@ function getFirebaseData(type, cb) {
     // var pokemonChar = receivedData[29]
     // If "type" is equal to "pokemon", use "var pokemonChar".
 
-
-    // Get the html dom element with ID of "pokemonName" and set its "innerText" to "pokemonChar.name"
-
-    // Get the html dom element with ID of "pokemonImg" and set its "src" "attribute" to "pokemonChar.imageURL"
-
-
 if (type === 'pokemon') {
-    type = true;
-    name = pokemonChar;
+     // Get the html dom element with ID of "pokemonName" and set its "innerText" to "pokemonChar.name"
+    $('#pokemonData').text(charObj.name);
+    // Get the html dom element with ID of "pokemonImg" and set its "src" "attribute" to "pokemonChar.imageURL"
+    $('.pokemon-image').attr('src', charObj.imageURL);
+        cb(charObj.name);
 }
     // else If "type" is equal to "marvel", use "var marvelChar".
 else if (type === 'marvel') {
