@@ -217,15 +217,13 @@ function getFirebaseData(type, cb) {
     // Use that random number as an index for the received array to grab a random character.
     // Set var character to the index of the received array.
     
-    var charObj = marvel;
+    var charObj = fireArr[charIndex];
     
     // var pokemonChar = receivedData[29]
     // If "type" is equal to "pokemon", use "var pokemonChar".
 
 
     // Get the html dom element with ID of "pokemonName" and set its "innerText" to "pokemonChar.name"
-var pokemonChar = pokemonChar.name("Pokemon")[0].get(pokemonName);
-var pokemonChar = Element.pokemonName(pokemonChar.name);
 
     // Get the html dom element with ID of "pokemonImg" and set its "src" "attribute" to "pokemonChar.imageURL"
 
@@ -240,10 +238,11 @@ else if (type === 'marvel') {
     type = true;
     name = marvelChar;
     }
-console.log(name);
     // Get the html dom element with ID of "marvelName" and set its "innerText" to "marvelChar.name"
 
-var marvelChar = Element.pokemonName(pokemonChar.name);
+else {
+    console.log('error occured in dom manipulation');
+}
     // Get the html dom element with ID of "marvelImg" and set its "src" "attribute" to "marvelChar.imageURL"
 
   }
