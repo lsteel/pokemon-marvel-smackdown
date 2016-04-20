@@ -200,7 +200,7 @@ project.init = function(){
 
 
 
-function getFirebaseData(type) {
+function getFirebaseData(type, cb) {
     //ERIN, DO YOUR CODE AFTER THIS LINE, IN THIS FUNCTION
     var ref = new Firebase('https://blinding-heat-3803.firebaseio.com/' + type);
 
@@ -208,7 +208,8 @@ function getFirebaseData(type) {
     //You'll us the ".on()" method linked below
     // https://www.firebase.com/docs/web/api/query/on.html
 
-    getRef.on('value', function() {
+    getRef.on('value', function(data) {
+      var fireArr = data.val();{
     // In the calback function of ".on()"
     // Generate a random whole number between 1 and the length of the received array.
     var charIndex = Math.floor(Math.random() * (fireArr.length() - 0));
@@ -231,12 +232,13 @@ var pokemonName = marvel;
 var type;
 var name;
 
-if (pokemonName = pokemon) {
+if (type === 'pokemon') {
     type = true;
     name = pokemonChar;
 }
     // else If "type" is equal to "marvel", use "var marvelChar".
-else if (pokemonName = marvel) {
+else if (type === 'marvel') {
+
     type = true;
     name = marvelChar;
     }
