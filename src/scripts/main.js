@@ -239,11 +239,12 @@ else if (type === 'marvel') {
     $('.marvel-image').attr('src', charObj.imageURL);
     cb(charObj.name);
       }
+      
 else {
     console.log('error occured in dom manipulation');
       }
    
-      }
+      });
 
   // NO MORE FOR ERIN
 
