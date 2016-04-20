@@ -230,19 +230,20 @@ if (type === 'pokemon') {
         cb(charObj.name);
 }
     // else If "type" is equal to "marvel", use "var marvelChar".
+
 else if (type === 'marvel') {
-
-    type = true;
-    name = marvelChar;
-    }
     // Get the html dom element with ID of "marvelName" and set its "innerText" to "marvelChar.name"
+    $('#marvelData').text(charObj.name);
 
+    // Get the html dom element with ID of "marvelImg" and set its "src" "attribute" to "marvelChar.imageURL"
+    $('.marvel-image').attr('src', charObj.imageURL);
+    cb(charObj.name);
+      }
 else {
     console.log('error occured in dom manipulation');
-}
-    // Get the html dom element with ID of "marvelImg" and set its "src" "attribute" to "marvelChar.imageURL"
-
-  }
+      }
+   
+      }
 
   // NO MORE FOR ERIN
 
