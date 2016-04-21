@@ -200,69 +200,56 @@ project.init = function(){
 
 
 
-
-
-
-
-  function getFirebaseData(type) {
+function getFirebaseData(type, cb) {
     //ERIN, DO YOUR CODE AFTER THIS LINE, IN THIS FUNCTION
-    var getRef = new Firebase('https://blinding-heat-3803.firebaseio.com/' + type);
+    var ref = new Firebase('https://blinding-heat-3803.firebaseio.com/' + type);
 
     // Watch the data from firebase reference for changes/updates/ and get the data.
     //You'll us the ".on()" method linked below
     // https://www.firebase.com/docs/web/api/query/on.html
 
     getRef.on('value', function(data) {
-      var fireArr = data.val();
+      var fireArr = data.val();{
+    // In the calback function of ".on()"
+    // Generate a random whole number between 1 and the length of the received array.
+    var charIndex = Math.floor(Math.random() * (fireArr.length() - 0));
+    
+    // Use that random number as an index for the received array to grab a random character.
+    // Set var character to the index of the received array.
+    
+    var charObj = fireArr[charIndex];
+    
+    // var pokemonChar = receivedData[29]
+    // If "type" is equal to "pokemon", use "var pokemonChar".
 
-      // In the calback function of ".on()"
-      // Generate a random whole number between 1 and the length of the received array.
+if (type === 'pokemon') {
+     // Get the html dom element with ID of "pokemonName" and set its "innerText" to "pokemonChar.name"
+    $('#pokemonData').text(charObj.name);
+    // Get the html dom element with ID of "pokemonImg" and set its "src" "attribute" to "pokemonChar.imageURL"
+    $('.pokemon-image').attr('src', charObj.imageURL);
+        cb(charObj.name);
+}
+    // else If "type" is equal to "marvel", use "var marvelChar".
 
-      var charIndex = Math.floor(Math.random() * (fireArr.length() - 0));
+else if (type === 'marvel') {
+    // Get the html dom element with ID of "marvelName" and set its "innerText" to "marvelChar.name"
+    $('#marvelData').text(charObj.name);
 
-      // Use that random number as an index for the received array to grab a random character.
-      // Set var character to the index of the received array.
-
-      var charObj = fireArr[charIndex];
-
-      // If "type" is equal to "pokemon", use "var pokemonChar".
-
-      if (type === 'pokemon') {
-        
+    // Get the html dom element with ID of "marvelImg" and set its "src" "attribute" to "marvelChar.imageURL"
+    $('.marvel-image').attr('src', charObj.imageURL);
+    cb(charObj.name);
       }
+      
+else {
+    console.log('error occured in dom manipulation');
+      }
+   
+      });
 
-      // Get the html dom element with ID of "pokemonName" and set its "innerText" to "pokemonChar.name"
-      // var pokemonChar = pokemonChar.name("Pokemon")[0].get(pokemonName);
-      // var pokemonChar = Element.pokemonName(pokemonChar.name);
-
-      // Get the html dom element with ID of "pokemonImg" and set its "src" "attribute" to "pokemonChar.imageURL"
-      // .get(pokemonImg) src="pokemonChar.imageURL";
-      // var pokemonName(pokemonImg) src="pokemonChar.imageURL";
-
-      // var pokemonName = marvel;
-      // var type;
-      // var name;
-      //
-      // if (pokemonName = pokemon) {
-      //     type = true;
-      //     name = pokemonChar;
-      // }
-      // else If "type" is equal to "marvel", use "var marvelChar".
-      // else if (pokemonName = marvel) {
-      //     type = true;
-      //     name = marvelChar;
-      //     }
-      // Get the html dom element with ID of "marvelName" and set its "innerText" to "marvelChar.name"
-
-      // var marvelChar = Element.pokemonName(pokemonChar.name);
-      // Get the html dom element with ID of "marvelImg" and set its "src" "attribute" to "marvelChar.imageURL"
-      // var marvelImg = (pokemonImg) src="pokemonChar.imageURL";
-
-    });
-    // NO MORE FOR ERIN
+  // NO MORE FOR ERIN
 
 
-  }
+
 
 
 
