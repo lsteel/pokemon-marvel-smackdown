@@ -43,7 +43,6 @@ project.init = function(){
 
   $.getJSON("http://gateway.marvel.com:80/v1/public/characters?apikey=d6af5b05ba9896e4c91f6a2881c8bbcc", function(data) {
     marvelData = data.data.results;
-    getFirebaseData("marvel");
     setFirebaseData(marvelData, "marvel");
   });
 
@@ -93,7 +92,6 @@ project.init = function(){
 
   $.getJSON("http://pokeapi.co/api/v2/pokemon?limit=151", function(data) {
     pokemonData = data.results;
-    getFirebaseData("pokemon");
     setFirebaseData(pokemonData, "pokemon");
   });
 
@@ -200,56 +198,86 @@ project.init = function(){
 
 
 
-function getFirebaseData(type, cb) {
+
+
+
+
+  function getFirebaseData(type, cb) {
     //ERIN, DO YOUR CODE AFTER THIS LINE, IN THIS FUNCTION
-    var ref = new Firebase('https://blinding-heat-3803.firebaseio.com/' + type);
+    var getRef = new Firebase('https://blinding-heat-3803.firebaseio.com/' + type);
 
     // Watch the data from firebase reference for changes/updates/ and get the data.
     //You'll us the ".on()" method linked below
     // https://www.firebase.com/docs/web/api/query/on.html
 
     getRef.on('value', function(data) {
-      var fireArr = data.val();{
-    // In the calback function of ".on()"
-    // Generate a random whole number between 1 and the length of the received array.
-    var charIndex = Math.floor(Math.random() * (fireArr.length() - 0));
-    
-    // Use that random number as an index for the received array to grab a random character.
-    // Set var character to the index of the received array.
-    
-    var charObj = fireArr[charIndex];
-    
-    // var pokemonChar = receivedData[29]
-    // If "type" is equal to "pokemon", use "var pokemonChar".
+      var fireArr = data.val();
 
-if (type === 'pokemon') {
-     // Get the html dom element with ID of "pokemonName" and set its "innerText" to "pokemonChar.name"
-    $('#pokemonData').text(charObj.name);
-    // Get the html dom element with ID of "pokemonImg" and set its "src" "attribute" to "pokemonChar.imageURL"
-    $('.pokemon-image').attr('src', charObj.imageURL);
+      // In the calback function of ".on()"
+      // Generate a random whole number between 1 and the length of the received array.
+
+      var charIndex = Math.floor(Math.random() * (fireArr.length - 0));
+
+      // Use that random number as an index for the received array to grab a random character.
+      // Set var character to the index of the received array.
+
+      var charObj = fireArr[charIndex];
+
+      // If "type" is equal to "pokemon", use "var pokemonChar".
+
+      if (type === 'pokemon') {
+        // Get the html dom element with ID of "pokemonName" and set its "innerText" to "pokemonChar.name"
+        $('#pokemonData').text(charObj.name);
+
+        // Get the html dom element with ID of "pokemonImg" and set its "src" "attribute" to "pokemonChar.imageURL"
+        $('.pokemon-image').attr('src', charObj.imageURL);
         cb(charObj.name);
-}
-    // else If "type" is equal to "marvel", use "var marvelChar".
-
-else if (type === 'marvel') {
-    // Get the html dom element with ID of "marvelName" and set its "innerText" to "marvelChar.name"
-    $('#marvelData').text(charObj.name);
-
-    // Get the html dom element with ID of "marvelImg" and set its "src" "attribute" to "marvelChar.imageURL"
-    $('.marvel-image').attr('src', charObj.imageURL);
-    cb(charObj.name);
       }
-      
-else {
-    console.log('error occured in dom manipulation');
+
+      else if (type === 'marvel') {
+        // Get the html dom element with ID of "marvelName" and set its "innerText" to "marvelChar.name"
+        $('#marvelData').text(charObj.name);
+
+        // Get the html dom element with ID of "marvelImg" and set its "src" "attribute" to "marvelChar.imageURL"
+        $('.marvel-image').attr('src', charObj.imageURL);
+        cb(charObj.name);
       }
-   
-      });
 
-  // NO MORE FOR ERIN
+      else {
+        console.log('error occured in dom manipulation');
+      }
+
+    });
+    // NO MORE FOR ERIN
 
 
+  }
 
+  function smackdown() {
+    var arr = [];
+    var i = 0;
+    getFirebaseData("marvel", function(name) {
+      arr[0] = name;
+      i++
+      if (i === 2) {
+        var winnerIndex = Math.floor(Math.random() * (arr.length - 0));
+        $('#winner').text(arr[winnerIndex]);
+      }
+    });
+    getFirebaseData("pokemon", function(name) {
+      arr[1] = name;
+      i++
+      if (i === 2) {
+        var winnerIndex = Math.floor(Math.random() * (arr.length - 0));
+        $('#winner').text(arr[winnerIndex]);
+      }
+    });
+  }
+
+
+  $('#button').click(function() {
+    smackdown();
+  });
 
 
 
