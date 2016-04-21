@@ -41,7 +41,7 @@ project.init = function(){
   var pokemonChar = {};
   var marvelChar = {};
 
-  $.getJSON("http://gateway.marvel.com:80/v1/public/characters?apikey=d6af5b05ba9896e4c91f6a2881c8bbcc", function(data) {
+  $.getJSON("http://gateway.marvel.com:80/v1/public/characters?limit=100&apikey=d6af5b05ba9896e4c91f6a2881c8bbcc", function(data) {
     marvelData = data.data.results;
     setFirebaseData(marvelData, "marvel");
   });
@@ -276,7 +276,10 @@ project.init = function(){
 
 
   $('#button').click(function() {
-    smackdown();
+    $(this).toggleClass('active');
+    if ($(this).hasClass('active')) {
+      smackdown();
+    }
   });
 
 
